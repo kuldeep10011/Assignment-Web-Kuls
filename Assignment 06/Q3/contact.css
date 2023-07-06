@@ -1,0 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Part */
+
+img[alt="Medifine Logo"]{
+    width: 150px;
+}
+
+nav{
+height: 15vh;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 6%;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+form{
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+}
+
+main{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form h1{
+    text-align: center;
+  }
+
+ 
+  form div label{
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  form div input{
+    border: transparent;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+
+  form div textarea{
+    border: transparent;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+
+  form button{
+    border: transparent;
+    border-radius: 10px;
+    background: #20BC7E;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+  }

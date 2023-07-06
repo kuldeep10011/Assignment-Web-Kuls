@@ -1,0 +1,88 @@
+/* I am Unable to do the green box and yellow box part */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Part */
+
+img[alt="Medifine Logo"]{
+    width: 150px;
+}
+
+nav{
+height: 15vh;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 6%;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+/* Left Section */
+
+main{
+    display: flex;
+    width: 90%;
+}
+
+.left{
+    height: auto;
+    margin-left: 7%;
+    position: relative;
+    margin-top: 100px;
+}
+
+img[alt="Slesh01"]
+{
+    margin-left: 650px;
+    position: absolute;
+}
+
+img[alt="Mouse"]
+{
+    margin-top: -930px;
+   margin-left: 35vw;
+   
+}
+
+button{
+    background-color: #20bc7e;
+    border-radius: 40px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+img[alt="Steth"]
+{
+    position: absolute;
+    width: 90%;
+    top: -60px;
+    right: -25%;
+    z-index: -1;
+}
+
+/* Right Section */
+
+.doctor {
+  position: absolute;
+  right: -4;
+  top: -4;
+  height: 100%;
+}
+
+
