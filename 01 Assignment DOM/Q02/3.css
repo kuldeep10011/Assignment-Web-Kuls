@@ -1,0 +1,13 @@
+body{
+    height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+}
+
+button{
+    cursor: pointer;
+    color: red;
+    background-color: black;
+}

@@ -1,0 +1,24 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    
+}
+
+.div{
+    display: flex;
+    gap: 5px;
+}
+
+#resetBtn{
+   margin-left: 70px;
+}
+
+.container{
+box-shadow: 0 0 5px black;
+padding: 40px;
+flex-direction: column;
+border-radius: 5px;
+}
