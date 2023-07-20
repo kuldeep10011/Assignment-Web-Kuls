@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+
+  <script>
+    // Sample cart array with item quantities reduced to half (due to the bug)
+    const cart = [1, 2, 3, 4];
+
+    function fixCartBug(cart) {
+      // Double the quantity of each item in the cart
+      const correctedCart = cart.map((quantity) => quantity * 2);
+      return correctedCart;
+    }
+
+    // Fix the cart bug and store the corrected cart
+    const correctedCart = fixCartBug(cart);
+    console.log("Corrected Cart:", correctedCart);
+  </script>
+</body>
+</html>

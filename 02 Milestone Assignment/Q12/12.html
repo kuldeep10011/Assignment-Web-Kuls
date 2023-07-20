@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental Cost Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Car Rental Cost Calculator</h1>
+  <label for="days">Enter number of days rented:</label>
+  <input type="number" id="days">
+  <label for="carType">Select car type:</label>
+  <select id="carType">
+    <option value="economy">Economy</option>
+    <option value="midsize">Midsize</option>
+    <option value="luxury">Luxury</option>
+  </select>
+  <button onclick="calculateRentalCost()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateRentalCost() {
+      const daysRented = parseInt(document.getElementById("days").value);
+      const carType = document.getElementById("carType").value;
+      let rentalCostPerDay;
+
+      switch (carType) {
+        case "economy":
+          rentalCostPerDay = 4000;
+          break;
+        case "midsize":
+          rentalCostPerDay = 10000;
+          break;
+        case "luxury":
+          rentalCostPerDay = 20000;
+          break;
+        default:
+          document.getElementById("result").innerText = "Please select a valid car type.";
+          return;
+      }
+
+      const totalCost = rentalCostPerDay * daysRented;
+      document.getElementById("result").innerText = `Total Rental Cost: Rs. ${totalCost}/-`;
+    }
+  </script>
+</body>
+</html>

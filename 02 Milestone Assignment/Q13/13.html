@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Restaurant Bill Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./13.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Restaurant Bill Calculator</h1>
+    <div class="form">
+      <label for="dishCost">Dish Cost:</label>
+      <input type="number" id="dishCost" min="0">
+      <label for="peopleCount">Number of People:</label>
+      <input type="number" id="peopleCount" min="1">
+      <button onclick="calculateBill()">Calculate Bill</button>
+    </div>
+    <div class="result" id="result"></div>
+  </div>
+  <script src="./13.js"></script>
+</body>
+</html>

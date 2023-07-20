@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove Duplicate Items</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Customer Cart</h1>
+  <ul id="cartItems">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item1</li>
+    <li>item4</li>
+    <li>item2</li>
+  </ul>
+  <button onclick="removeDuplicates()">Remove Duplicates</button>
+
+  <script>
+    function removeDuplicates() {
+      const cartItems = document.querySelectorAll("#cartItems li");
+      const itemSet = new Set();
+
+      // Filter out duplicate items
+      const uniqueItems = Array.from(cartItems).filter((item) => {
+        const itemName = item.innerText;
+        if (!itemSet.has(itemName)) {
+          itemSet.add(itemName);
+          return true;
+        }
+        return false;
+      });
+
+      // Clear existing cart items
+      const cartItemsElement = document.getElementById("cartItems");
+      cartItemsElement.innerHTML = "";
+
+      // Display new cart items without duplicates
+      uniqueItems.forEach((item) => {
+        cartItemsElement.appendChild(item);
+      });
+    }
+  </script>
+</body>
+</html>

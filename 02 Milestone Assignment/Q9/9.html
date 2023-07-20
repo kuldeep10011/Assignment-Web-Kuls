@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>Divisible by 3, Not by 2</title>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    pre {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Divisible by 3, Not by 2</h1>
+  <label for="numbers">Enter comma-separated numbers:</label>
+  <input type="text" id="numbers">
+  <button onclick="findNumbers()">Find Numbers</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function findNumbers() {
+      const inputNumbers = document.getElementById("numbers").value;
+      const numbersArray = inputNumbers.split(",").map(Number);
+      const outputElement = document.getElementById("output");
+
+      let result = "";
+
+      for (const number of numbersArray) {
+        if (number % 3 === 0 && number % 2 !== 0) {
+          result += number + " ";
+        } else {
+          // Skip to the next iteration if the number doesn't meet the condition
+          continue;
+        }
+      }
+
+      if (result === "") {
+        result = "No numbers are divisible by 3, but not by 2.";
+      }
+
+      outputElement.innerText = result;
+    }
+  </script>
+</body>
+</html>

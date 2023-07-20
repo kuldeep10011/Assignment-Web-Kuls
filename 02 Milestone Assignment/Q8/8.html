@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inverted Right Angle Triangle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    pre {
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Inverted Right Angle Triangle Pattern</h1>
+  <label for="rows">Enter the number of rows:</label>
+  <input type="number" id="rows" min="1">
+  <button onclick="generatePattern()">Generate Pattern</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function generatePattern() {
+      const rows = document.getElementById("rows").value;
+      const outputElement = document.getElementById("output");
+
+      if (rows <= 0) {
+        outputElement.innerText = "Please enter a valid positive integer.";
+        return;
+      }
+
+      let pattern = "";
+      for (let i = rows; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+          pattern += "*";
+        }
+        pattern += "\n";
+      }
+
+      outputElement.innerText = pattern;
+    }
+  </script>
+</body>
+</html>
